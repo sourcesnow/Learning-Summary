@@ -1,7 +1,7 @@
 #1，使用session_status()来判断是否启动session
 ***session_status()!=PHP_SESSION_ACTIVE***
 #2，session通过cookie的方式分配phpsessid，可以通过chrome的DevTools查看network，获得当前session的id
-#3，同时session是以浏览器为依托，一个浏览器对应一个时刻只能获得一个id，因此打开多个tab，但对应的只有一个id，同时关掉浏览器则会销毁session，windows下的php将session文件保存在C:\windows\temp文件夹下面
+
 *例如*
 *session.php*
 <?php 
