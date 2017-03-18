@@ -1,4 +1,4 @@
-# 2017-03-18
+# 2017-03-18   
 5. js中concat函数，仅仅只是放回两个数组的副本，并不改变原数组
 6. null==undefined 
 7. 下面这个问题，注意+同时是字符连接运算
@@ -130,5 +130,7 @@ objTransfer={name:'hello'};
 alert(showThisWindow.call(window));//输出的是Tony，call中使用的实参是objTansfer的时候,则输出的是hello。
 
 24. apply的方法与call类似，都是改变this的指向，但function.call(obj,argument1,argument2,...)将函数的参数是一个个输入，但function.apply(obj,[argument1,argument2,...]),则是将参数一数组的行事传给函数。bind 则是绑定对象，并返回函数，并不是像前面两个一样立即执行，如果bind需要立即执行的话，则需要()运算符。*可以根据英文含义来区分三者,bind只是绑定，前两者都是调用、应用*
+
+[参考](http://javascript.ruanyifeng.com)
 
 
