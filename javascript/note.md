@@ -130,6 +130,33 @@ objTransfer={name:'hello'};
 alert(showThisWindow.call(window));//输出的是Tony，call中使用的实参是objTansfer的时候,则输出的是hello。
 
 24. apply的方法与call类似，都是改变this的指向，但function.call(obj,argument1,argument2,...)将函数的参数是一个个输入，但function.apply(obj,[argument1,argument2,...]),则是将参数一数组的行事传给函数。bind 则是绑定对象，并返回函数，并不是像前面两个一样立即执行，如果bind需要立即执行的话，则需要()运算符。*可以根据英文含义来区分三者,bind只是绑定，前两者都是调用、应用*
+25. js中的prototype只能使用在构造对象上，不能使用在实例上
+
+>function showProto(name){
+  this.name=name;
+  //this.age=age;
+  this.func=function(){
+    console.log('Hello');
+  }
+}
+showProto.prototype.age=35;
+var instanceExam=new showProto('protoType');
+var instanceTwo=new showProto('jason');
+alert(showProto.prototype.constructor);//注意这里使用的是构造对象，不能将其改为instanceTwo
+**注意构造函数自身没有构造函数，继承自prototype,可以使用hasOwnProperty()函数进行查看**
+
+26. __proto__与prototype之间的区别，一个用于实例化的对象，一个用于构造函数本身。上面的代码如果想使用实例化的对象来获得prototype的构造函数的话，可以通过将showProto.prototype.constructor改为intanceExam.__proto__.constructor。prototype是函数对象专有的属性，而__proto__则是所有对象都有的，包括函数。
+
+>具体之间的区别是，见下图
+!['关于__proto__与prototype']("__proto__.jpg" '__proto__与proototype')
+
+
+
+
+
+
+
+
 
 [参考](http://javascript.ruanyifeng.com)
 
