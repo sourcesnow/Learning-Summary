@@ -42,3 +42,5 @@
 4. @import 与link都可以引入css样式表,但前者是css中的样式，后者是html的标签。
  前者如果要在html中使用则是需要在<header></header>中引入<style type="text/css"></style>并将其放入其中，因为是css的表现形式 **css首行可以多考虑引入@charset "utf-8"**
 
+5. bootstrap中使用的栅栏格式，xs，sm，md，lg 分别对应 <768,>=768,>=992,>=1200 
+
