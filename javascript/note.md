@@ -160,6 +160,23 @@ ajaxStart(callback)
 ajaxStop(callback) 
 ajaxSuccess(callback)
 
+28. label中的使用，结合其for属性能指定其为那个input服务，例如下面代码，点击label则可以获得input中的点击事件。
+
+> <label for="nameone">Name:</label><input type="text" name="nameone" id="
+>  nameone" onclick="label()">
+>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的 表单控件上。
+
+29. js中的出来对象之外，所有类型都是不可变的（值本身无法被改变）。例如，与 C 语言不同，JavaScript 中字符串是不可变的（如，JavaScript 中对字符串的操作一定返回了一个新字符串，原始字符串并没有被改变）。我们称这些类型的值为“原始值”。
+30. js中存储数据的内存格式
+* 栈：原始数据类型（Undefined，Null，Boolean，Number、String）
+* 堆：引用数据类型（对象、数组和函数）
+  两种类型的区别是：存储位置不同；
+  原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+  引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；*引用数据类型在栈中存储了指针*，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体
+
+31. 区分null与undefined [参考](http://www.ruanyifeng.com/blog/2014/03/ undefined-vs-null.html) **null是一个对象**
+32. 事件处理机制，冒泡和事件捕获机制
+
 
 
 
