@@ -150,6 +150,16 @@ alert(showProto.prototype.constructor);//注意这里使用的是构造对象，
 >具体之间的区别是，见下图
 !['关于__proto__与prototype']("__proto__.jpg" '__proto__与proototype')
 
+27. ajax事件,如下
+
+>ajax的事件是： 
+ajaxComplete(callback) 
+ajaxError(callback) 
+ajaxSend(callback) 
+ajaxStart(callback) 
+ajaxStop(callback) 
+ajaxSuccess(callback)
+
 
 
 
