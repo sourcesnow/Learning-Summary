@@ -176,6 +176,17 @@ ajaxSuccess(callback)
 
 31. 区分null与undefined [参考](http://www.ruanyifeng.com/blog/2014/03/ undefined-vs-null.html) **null是一个对象**
 32. 事件处理机制，冒泡和事件捕获机制
+33. JavaScript的函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函数调用，和使用 apply 或 call 调用。
+34. this的一个总原则：this指永远都是，调用函数的那个对象。
+35. **apply,call的作用就是改变函数的调用对象**
+36. setTimeout(,)如果它里面调用的是某个函数的方法的话，则此时的this，指向的是window
+
+> var one=1;
+> var testOne={
+> one:12,
+> two:function(){alert(this.one);}};
+> setTimeout(testOne.two,1000);//输出则会是1，不是2。
+
 
 
 
