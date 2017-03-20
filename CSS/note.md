@@ -65,9 +65,9 @@
 11. 多了解一下display:flex
 12. 常用的hack技术:
  
-> png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
-> 浏览器默认的margin和padding不同。解决方案是加一个全局的*   
-> {margin:0;padding:0;}来统一
+> * png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
+> * 浏览器默认的margin和padding不同。解决方案是加一个全局的*   
+> * {margin:0;padding:0;}来统一
 > * 
 > * IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比大
 > * 浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}
@@ -82,9 +82,5 @@
    超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:
    L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
 
-
- 
-  
-
-
+9. visibility:collapse
 
