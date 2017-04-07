@@ -11,7 +11,7 @@
 3. 不能只记住五层模型，要记住OSI七层模型
   * Application   协议:DNS SMTP FTP SNMP TLENET
   * Presentation(保证一台主机的应用层信息被另一台主机理解)   协议:ASCII JPEG GIF TIFF MIDI MPEG(包括数据结构标准和图像标准，视频标准等)还有SSL MIME(将邮件中的非ACSII转换成ASCII，便于SMTP协议)
-  * Session   Sockets协议 
+  * Session   Sockets协议 SQL、NFS
   * Transport
   * Network
   * Data link
@@ -25,4 +25,12 @@
 * 语义：规定通信双方彼此“讲什么”，即确定协议元素的类型，如规定通信双方要发出什么控制信      息，执行的动作和返回的应答。
 * 语法：规定通信双方彼此“如何讲”，即确定协议元素的格式，如数据和控制信息的格式。
 * 交换规则：规定了信息交流的次序。
+
+6. 比特率=波特率*log2(相位数);
+7. GET:通过请求URI得到资源,POST:用于添加新的内容,OPTIONS:询问可以执行哪些方法,
+TRACE:用于远程诊断服务器,HEAD:类似于GET,但不返回body信息，用于检查对象是否存在，以及得到对象的元数据 HEAD,GET,OPTIONS和TRACE视为安全的方法，因为它们只是从服务器获得资源而不对服务器做任何修改，HEAD,GET,OPTIONS在用户端不安全。而POST则影响服务器上的资源。
+8. NAT(network address translation)，包括静态转换，动态转换，端口多路复用(PAT)。
+9. 总线型拓扑、环型拓扑、 *树型拓扑*、星型拓扑、混合型拓扑以及网状拓扑是网络中的拓扑结构
+10. https的工作机制，包括对称加密，非对称加密，和hash加密。
+11. URL重写，隐藏表单域，cookie,sesion是会话跟踪技术四种技术，就是识别不同的访问对象。第一个是将用户的信息写在url中，通过url来识别用户。隐藏表单域，通过将用户信息写下一个表单中，但这个表单对用户是hidden的。session是依赖于cookie的。通过写在cookie中发送给客户端。
 
