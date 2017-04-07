@@ -1,7 +1,7 @@
 # 2017-03-18
 1 下面代码中，css中伪类的选择
 
->下面代码中，可以看出来伪类的优先级与class的优先级一致，将两者换个位置，会导致变换的效果
+>下面代码中，可以看出来伪元素的优先级与class的优先级一致，将两者换个位置，会导致变换的效果
 <style type="text/css">    
         #first li.list{color: green;}
         #first li:first-child{color: red;}
@@ -55,7 +55,7 @@
 
 7. 记得查看MDN中的空元素列表 [参考](https://developer.mozilla.org/zh-CN/docs/Glossary/%E7%A9%BA%E5%85%83%E7%B4%A0)
 8. css中可继承类和不可继承的各种:
-* 可继承的样式： font-size font-family color, UL LI DL DD DT;
+* 可继承的样式： font-size font-family color;
 * 不可继承的样式：border padding margin width height 
 10. css中样式表优先级问题:
  
@@ -83,4 +83,9 @@
    L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
 
 9. visibility:collapse
+
+# 2017-03-24
+ 
+1. 浏览器解析css中的选择器时，顺序是从右向左。[参考](https://segmentfault.com/q/1010000000713509)
+2. a 标签的伪类使用顺序 link > visited > hover > active
 
