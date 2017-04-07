@@ -219,7 +219,11 @@ ajaxSuccess(callback)
 四、如果是数字，对方是对象，对象取valueOf()或者toString()进行比较, 其他一律返回false
 五、null, undefined不会进行类型转换, 但它们俩相等
 
-
+# 2017-04-07
+1. js中的很多操作符与函数都喜欢将操作数进行转换，例如isNaN(),喜欢将内容转换成数值
+ 
+> isNaN("10") 显示false
+> isNaN(true) 显示false，因为true被转换成1
 
 
 
