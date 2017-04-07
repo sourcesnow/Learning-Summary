@@ -187,10 +187,37 @@ ajaxSuccess(callback)
 > two:function(){alert(this.one);}};
 > setTimeout(testOne.two,1000);//输出则会是1，不是2。
 
+37. screenX与screenY与clientX和clientY之间的区别是，一个返回是相对屏幕的原点的位置，一个相对的是浏览器窗口原点的位置。
+38. eventdipatch的使用
+39. js中的冒泡机制和事件触发机制，W3C则使用先进行事件触发，然后使用冒泡，这种中间是一个事件传播的过程。可以通过stoppropagation来阻止事件的传播。
+40. input 与datalist搭配使用，input中使用list与后面的datalist的id绑定
 
+# 2017-03-24
 
+1.下面这段代码的输出结果是
+ 
+ > var a,b;
+ > (function(){
+    alert(a);   //undefined
+    alert(b);   //udeffined
+    var a=b=3;   //这里的b未加var 声明的是全局变量
+    alert(a);   //3
+    alert(b);   //3
+    })();
+    alert(a); //undefined
+    alert(b); //3
 
-
+2. js中隐式转换规则
+   
+>一、首先看双等号前后有没有NaN，如果存在NaN，一律返回false。
+二、再看双等号前后有没有布尔，有布尔就将布尔转换为数字。（false是0，true是1）
+三、接着看双等号前后有没有字符串, 有三种情况：
+1、对方是对象，对象使用toString()或者valueOf()进行转换；
+2、对方是数字，字符串转数字；（前面已经举例）
+3、对方是字符串，直接比较；
+4、其他返回false
+四、如果是数字，对方是对象，对象取valueOf()或者toString()进行比较, 其他一律返回false
+五、null, undefined不会进行类型转换, 但它们俩相等
 
 
 
