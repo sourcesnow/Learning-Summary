@@ -219,14 +219,59 @@ ajaxSuccess(callback)
 四、如果是数字，对方是对象，对象取valueOf()或者toString()进行比较, 其他一律返回false
 五、null, undefined不会进行类型转换, 但它们俩相等
 
+[参考](http://javascript.ruanyifeng.com)
+
 # 2017-04-07
 1. js中的很多操作符与函数都喜欢将操作数进行转换，例如isNaN(),喜欢将内容转换成数值
  
 > isNaN("10") 显示false
 > isNaN(true) 显示false，因为true被转换成1
 
+2. 通过函数声明的方式，构建的函数，会得到提升，及js在执行代码之前，将给函数放置在代码顶端，而表达式声明函数的方式，的代码执行到它那才能被解析。例如:
+
+> console.log(sum(1,2));
+  function sum(a,b){
+    return a+b;
+  }//没有错误
+
+>  console.log(sum(1,2));
+>  var sum=function(a,b){
+      return a+b;
+   }//提示错误
+
+3. 可以通过arguments.callee() 方法来解除相关函数名与函数执行之间的耦合，例如:
+ *在严格模式下不能使用这种方法*
+> function factory(num){
+  if(num<2){
+    return 1;
+  }
+  else{
+    return num*arguments.callee(num-1);
+  }
+ }
+ var copyOne=factory;
+ factory=function(){ //这里只能使用表达式声明函数，如果使用函数声明的方法，则会变量提升，是的copyOne中的函数就是return 0；
+  return 0;
+ }
+ console.log(copyOne(5));//递归调用的结果
+> 如果在使用的是factory的话，执行的结果则是0
+
+4. 所有对象的boolean转换都是true。例如:
+
+> var one=new Boolean(false);
+> console.log(one&&true)//结果显示true
+> var two=false;
+> console.log(two&&true)//结果输出false
+
+5.regexp中的/g后缀标识很重要的，一般的模式匹配只只找到第一个匹配值，而加了/g 则将全文中的所有匹配对象一起匹配。
+
+> 例如:
+> var text="cat bat fat";
+> var pattern=/at/;
+> var pattern1=/at/g;
+> var reuslt=text.replace(pattern,"od");//"cod bat fat"
+> var reuslt1=text.replace(pattern1,"od");//"cod bod fod"
 
 
-[参考](http://javascript.ruanyifeng.com)
 
 
