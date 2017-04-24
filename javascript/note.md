@@ -1,5 +1,5 @@
 # 2017-03-18   
-5. js中concat函数，仅仅只是放回两个数组的副本，并不改变原数组
+5. js中concat函数，仅仅只是返回两个数组的副本，并不改变原数组
 6. null==undefined 
 7. 下面这个问题，注意+同时是字符连接运算
 
@@ -188,7 +188,7 @@ ajaxSuccess(callback)
 > setTimeout(testOne.two,1000);//输出则会是1，不是2。
 
 37. screenX与screenY与clientX和clientY之间的区别是，一个返回是相对屏幕的原点的位置，一个相对的是浏览器窗口原点的位置。
-38. eventdipatch的使用
+38. dispatchEvent的使用
 39. js中的冒泡机制和事件触发机制，W3C则使用先进行事件触发，然后使用冒泡，这种中间是一个事件传播的过程。可以通过stoppropagation来阻止事件的传播。
 40. input 与datalist搭配使用，input中使用list与后面的datalist的id绑定
 
@@ -271,6 +271,19 @@ ajaxSuccess(callback)
 > var pattern1=/at/g;
 > var reuslt=text.replace(pattern,"od");//"cod bat fat"
 > var reuslt1=text.replace(pattern1,"od");//"cod bod fod"
+
+6. with可以直接改变内部变量的作用域，改变作用域链的还有catch语句
+
+> function show(){
+>   var body=8;
+>   with(document){
+>    console.log(body)//这里 直接输出document中的body元素，而不是body=8，对性能影响较大
+>   }
+> }
+> 
+
+7. void 的用法是用来返回undefined的，使用刚在uri中.[参考](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)
+8. +运算符的优先级高于三目运算符，"value"+("0"!=true)?true:false,最后还是会输出true
 
 
 
